@@ -1,0 +1,20 @@
+service: xibix
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  region: eu-central-1
+  runtime: java8
+
+custom:
+  stage: ${sls:stage}
+
+package:
+  artifact: target/meshItUp-dev.jar
+
+functions:
+  meshItUp:
+    handler: com.serverless.Handler
+
+plugins:
+  - serverless-offline
