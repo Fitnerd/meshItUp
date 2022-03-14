@@ -13,6 +13,6 @@
 
 This will fail because of the serverless offline throwing an error:
 
-```serverless offline```
+```serverless offline start```
 
 ```aws lambda invoke /dev/null --endpoint-url http://localhost:3002 --function-name xibix-dev-meshItUp```
